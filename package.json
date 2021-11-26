@@ -1,0 +1,28 @@
+{
+  "name": "@ecubelabs/storybook-addon-intl",
+  "version": "1.0.0",
+  "description": "Controlling the locale of the stories",
+  "main": "dist/preset.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ecube-Labs/storybook-addon-intl.git"
+  },
+  "keywords": [
+    "storybook",
+    "addons",
+    "intl",
+    "internationalization",
+    "i18n",
+    "locale",
+    "react"
+  ],
+  "author": "Ecube Labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ecube-Labs/storybook-addon-intl/issues"
+  },
+  "homepage": "https://github.com/Ecube-Labs/storybook-addon-intl#readme"
+}
