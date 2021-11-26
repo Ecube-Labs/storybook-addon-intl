@@ -13,6 +13,7 @@
     "url": "git+https://github.com/Ecube-Labs/storybook-addon-intl.git"
   },
   "keywords": [
+    "storybook-addons",
     "storybook",
     "addons",
     "intl",
@@ -21,6 +22,10 @@
     "locale",
     "react"
   ],
+  "storybook": {
+    "supportedFrameworks": ["react"],
+    "displayName": "locale addon"
+  },
   "author": "Ecube Labs",
   "license": "ISC",
   "bugs": {
