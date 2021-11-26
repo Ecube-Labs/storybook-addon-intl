@@ -83,7 +83,7 @@ export const parameters = {
 
   // Default: (locale: string) => ['ar', 'he'].includes(locale)
   // If `true` is returned, direction is injected as "rtl". Otherwise "ltr" is injected.
-  dirResolver: (locale: string) => {
+  directionResolver: (locale: string) => {
     const [lang] = locale.split('_');
     return ['ar', 'he'].includes(lang);
   },
