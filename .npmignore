@@ -1,0 +1,6 @@
+.vscode/
+src/
+node_modules/
+.eslintrc.js
+.prettierrc.js
+tsconfig.json

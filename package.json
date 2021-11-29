@@ -1,16 +1,19 @@
 {
   "name": "@ecubelabs/storybook-addon-intl",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "Controlling the locale of the stories",
   "main": "dist/preset.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublish": "rm -rf ./dist && npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ecube-Labs/storybook-addon-intl.git"
   },
   "keywords": [
+    "storybook-addons",
     "storybook",
     "addons",
     "intl",
@@ -19,10 +22,43 @@
     "locale",
     "react"
   ],
+  "storybook": {
+    "supportedFrameworks": [
+      "react"
+    ],
+    "displayName": "locale addon"
+  },
   "author": "Ecube Labs",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Ecube-Labs/storybook-addon-intl/issues"
   },
-  "homepage": "https://github.com/Ecube-Labs/storybook-addon-intl#readme"
+  "homepage": "https://github.com/Ecube-Labs/storybook-addon-intl#readme",
+  "dependencies": {
+    "@storybook/addons": "^6.3.12",
+    "@storybook/api": "^6.3.12",
+    "@storybook/components": "^6.3.12",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@ecubelabs/prettier-config": "^0.0.8",
+    "@ecubelabs/tsconfig": "^0.5.0",
+    "@storybook/react": "^6.3.12",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-ecubelabs": "^15.1.4",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "jest": "^27.3.1",
+    "prettier": "^2.5.0",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.5.2"
+  }
 }
