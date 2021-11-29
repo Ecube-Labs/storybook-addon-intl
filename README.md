@@ -1,5 +1,7 @@
 # @ecubelabs/storybook-addon-intl
 
+![storybook-addon-intl Example](/.github/assets/example.gif)
+
 A simple Locale switching addon.
 It can be used with third-party components, libraries and addons.
 
