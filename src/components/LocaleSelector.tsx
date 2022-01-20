@@ -22,7 +22,7 @@ const LocaleSelector = () => {
             value: locale,
             active: locale === currentLocale,
             onClick: () => {
-              updateGlobals({ locale, direction: directionResolver(locale) });
+              updateGlobals({ locale, direction: directionResolver(locale) ? 'rtl' : 'ltr' });
               onHide();
             },
           }))}
