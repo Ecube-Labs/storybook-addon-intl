@@ -1,6 +1,6 @@
 # @ecubelabs/storybook-addon-intl
 
-![storybook-addon-intl Example](/.github/assets/example.gif)
+![storybook-addon-intl Example](https://raw.githubusercontent.com/Ecube-Labs/storybook-addon-intl/main/.github/assets/example.gif)
 
 A simple Locale switching addon.
 It can be used with third-party components, libraries and addons.
