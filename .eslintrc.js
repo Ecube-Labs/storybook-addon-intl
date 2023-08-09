@@ -6,12 +6,11 @@ module.exports = {
     // https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
     'plugin:prettier/recommended',
   ],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'prettier'],
+  plugins: ['react'],
   env: {
     browser: true,
     jest: true,
