@@ -1,6 +1,6 @@
-import { addons, types } from '@storybook/addons';
-import { LocaleSelector } from '../components';
-import { ADDON_ID, TOOL_ID } from '../constants';
+import { addons, types } from '@storybook/manager-api';
+import { LocaleSelector } from './components';
+import { ADDON_ID, TOOL_ID } from './constants';
 
 addons.register(ADDON_ID, () => {
   addons.add(TOOL_ID, {

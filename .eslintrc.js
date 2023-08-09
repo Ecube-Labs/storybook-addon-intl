@@ -16,16 +16,9 @@ module.exports = {
     jest: true,
   },
   rules: {
+    'import/no-extraneous-dependencies': 'off',
+    'import/no-unresolved': 'off',
     // https://stackoverflow.com/a/59268871
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    'import/extensions': 'off',
   },
 };

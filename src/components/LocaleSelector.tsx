@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParameter, useGlobals } from '@storybook/api';
+import { useParameter, useGlobals } from '@storybook/manager-api';
 import { IconButton, WithTooltip, TooltipLinkList } from '@storybook/components';
 import { TOOL_ID, OPTION_PARAM_KEY, DIR_RESOLVER_PARAM_KEY } from '../constants';
 import { TranslateIcon } from './TranslateIcon';
@@ -13,7 +13,6 @@ const LocaleSelector = () => {
     <WithTooltip
       placement="top"
       trigger="click"
-      closeOnClick
       tooltip={({ onHide }) => (
         <TooltipLinkList
           links={localeOptions.map((locale) => ({

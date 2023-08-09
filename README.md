@@ -41,7 +41,7 @@ export default {
 
 ## with `react-intl`
 
-`.storybook/preview.ts`:
+`.storybook/preview.tsx`:
 
 ```tsx
 addDecorator((storyFn, argTypes) => {
@@ -57,7 +57,7 @@ addDecorator((storyFn, argTypes) => {
 
 ## with `react-helmet`
 
-`.storybook/preview.ts`:
+`.storybook/preview.tsx`:
 
 ```tsx
 addDecorator((storyFn, argTypes) => {

@@ -1,7 +1,15 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { DecoratorFunction, useEffect, useMemo, useArgs, useGlobals, Args } from '@storybook/addons';
+import { useEffect, useMemo } from 'react';
+import {
+  Renderer,
+  PartialStoryFn as StoryFunction,
+  StoryContext,
+  Addon_DecoratorFunction as DecoratorFunction,
+  Args,
+} from '@storybook/types';
+import { useGlobals, useArgs } from '@storybook/manager-api';
 
-export const withGlobals: DecoratorFunction = (StoryFn, context) => {
+export const withGlobals: DecoratorFunction = (StoryFn: StoryFunction<Renderer>, context: StoryContext<Renderer>) => {
   // prop destruction
   const {
     argTypes,
@@ -9,7 +17,7 @@ export const withGlobals: DecoratorFunction = (StoryFn, context) => {
   } = context;
 
   // lib, style hooks
-  const [args, updateArgs] = useArgs();
+  const [_, updateArgs] = useArgs();
   const [globals, updateGlobals] = useGlobals();
 
   // state, ref hooks
