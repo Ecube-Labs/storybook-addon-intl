@@ -2,7 +2,8 @@
   "name": "@ecubelabs/storybook-addon-intl",
   "version": "2.0.0",
   "description": "Controlling the locale of the stories",
-  "main": "dist/preset.js",
+  "main": "dist/index.js",
+  "files": ["dist", "package.json"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
