@@ -1,13 +1,17 @@
 import React from 'react';
-import { useParameter, useGlobals } from '@storybook/manager-api';
+import { useParameter, useGlobals } from '@storybook/client-api';
 import { IconButton, WithTooltip, TooltipLinkList } from '@storybook/components';
-import { TOOL_ID, OPTION_PARAM_KEY, DIR_RESOLVER_PARAM_KEY } from '../constants';
+import { ADDON_ID, OPTION_PARAM_KEY, DIR_RESOLVER_PARAM_KEY } from '../constants';
 import { TranslateIcon } from './TranslateIcon';
 
 const LocaleSelector = () => {
-  const localeOptions = useParameter(OPTION_PARAM_KEY, ['en', 'ko']);
-  const directionResolver = useParameter(DIR_RESOLVER_PARAM_KEY, (locale: string) => ['ar', 'he'].includes(locale));
+  const localeOptions = useParameter<string[]>(OPTION_PARAM_KEY);
+  const directionResolver = useParameter(DIR_RESOLVER_PARAM_KEY, (locale: string) => ['ar', 'he'].includes(locale))!;
   const [{ locale: currentLocale }, updateGlobals] = useGlobals();
+
+  if (!localeOptions || !localeOptions.length) {
+    return null;
+  }
 
   return (
     <WithTooltip
@@ -28,7 +32,7 @@ const LocaleSelector = () => {
         />
       )}
     >
-      <IconButton key={TOOL_ID} title="Select Locale">
+      <IconButton key={ADDON_ID} title="Select Locale">
         <TranslateIcon />
       </IconButton>
     </WithTooltip>

@@ -1,11 +1,11 @@
-import { Addon_DecoratorFunction as DecoratorFunction, Renderer, StoryContext } from '@storybook/types';
+import { ArgsEnhancer, Addon_DecoratorFunction as DecoratorFunction } from '@storybook/types';
 import { withGlobals } from './decorators/withGlobals';
 
 export const decorators: DecoratorFunction[] = [withGlobals];
 
 const fallback = { locale: 'en_US', direction: 'ltr' };
 
-const addIntlArgs = (context: StoryContext<Renderer>) => {
+const addIntlArgs: ArgsEnhancer = (context) => {
   const {
     argTypes,
     parameters: { intl = {} },
@@ -24,9 +24,9 @@ const addIntlArgs = (context: StoryContext<Renderer>) => {
   );
 };
 
-export const argsEnhancers = [addIntlArgs];
+export const argsEnhancers: ArgsEnhancer[] = [addIntlArgs];
 
-export const globals = {
-  locale: null,
-  direction: null,
-};
+// export const globals = {
+//   locale: null,
+//   direction: null,
+// };

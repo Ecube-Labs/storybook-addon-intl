@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "files": [
     "dist",
+    "manager.js",
     "package.json"
   ],
   "scripts": {
@@ -51,8 +52,9 @@
     }
   },
   "dependencies": {
+    "@storybook/api": "^7.2.1",
+    "@storybook/client-api": "^7.2.1",
     "@storybook/components": "^7.2.1",
-    "@storybook/manager-api": "^7.2.1",
     "@storybook/types": "^7.2.1"
   },
   "devDependencies": {

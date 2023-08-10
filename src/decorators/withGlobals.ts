@@ -7,7 +7,7 @@ import {
   Addon_DecoratorFunction as DecoratorFunction,
   Args,
 } from '@storybook/types';
-import { useGlobals, useArgs } from '@storybook/manager-api';
+import { useGlobals, useArgs } from '@storybook/client-api';
 
 export const withGlobals: DecoratorFunction = (StoryFn: StoryFunction<Renderer>, context: StoryContext<Renderer>) => {
   // prop destruction
