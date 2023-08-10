@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useEffect, useMemo } from 'react';
 import {
   Renderer,
   PartialStoryFn as StoryFunction,
@@ -7,7 +6,7 @@ import {
   Addon_DecoratorFunction as DecoratorFunction,
   Args,
 } from '@storybook/types';
-import { useGlobals, useArgs } from '@storybook/client-api';
+import { useGlobals, useArgs, useEffect, useMemo } from '@storybook/preview-api';
 
 export const withGlobals: DecoratorFunction = (StoryFn: StoryFunction<Renderer>, context: StoryContext<Renderer>) => {
   // prop destruction

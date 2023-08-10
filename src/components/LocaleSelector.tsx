@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParameter, useGlobals } from '@storybook/client-api';
+import { useParameter, useGlobals } from '@storybook/preview-api';
 import { IconButton, WithTooltip, TooltipLinkList } from '@storybook/components';
 import { ADDON_ID, OPTION_PARAM_KEY, DIR_RESOLVER_PARAM_KEY } from '../constants';
 import { TranslateIcon } from './TranslateIcon';
