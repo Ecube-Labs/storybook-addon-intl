@@ -1,6 +1,7 @@
 {
   "extends": "@ecubelabs/tsconfig/react.json",
   "compilerOptions": {
+    "target": "ES6",
     "baseUrl": "src",
     "outDir": "dist",
     "typeRoots": ["./node_modules/@types", "src/@types"]

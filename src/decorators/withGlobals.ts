@@ -51,5 +51,5 @@ export const withGlobals: DecoratorFunction = (StoryFn: StoryFunction<Renderer>,
 
   // handlers
 
-  return StoryFn(context);
+  return StoryFn();
 };

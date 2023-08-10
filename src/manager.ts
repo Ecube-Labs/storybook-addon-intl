@@ -1,4 +1,4 @@
-import { addons, types } from '@storybook/api';
+import { addons, types } from '@storybook/manager-api';
 import { LocaleSelector } from './components';
 import { ADDON_ID } from './constants';
 

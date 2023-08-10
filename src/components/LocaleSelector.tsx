@@ -1,17 +1,13 @@
 import React from 'react';
-import { useParameter, useGlobals } from '@storybook/preview-api';
+import { useParameter, useGlobals } from '@storybook/manager-api';
 import { IconButton, WithTooltip, TooltipLinkList } from '@storybook/components';
 import { ADDON_ID, OPTION_PARAM_KEY, DIR_RESOLVER_PARAM_KEY } from '../constants';
 import { TranslateIcon } from './TranslateIcon';
 
 const LocaleSelector = () => {
-  const localeOptions = useParameter<string[]>(OPTION_PARAM_KEY);
+  const localeOptions = useParameter(OPTION_PARAM_KEY, ['en', 'ko']);
   const directionResolver = useParameter(DIR_RESOLVER_PARAM_KEY, (locale: string) => ['ar', 'he'].includes(locale))!;
   const [{ locale: currentLocale }, updateGlobals] = useGlobals();
-
-  if (!localeOptions || !localeOptions.length) {
-    return null;
-  }
 
   return (
     <WithTooltip

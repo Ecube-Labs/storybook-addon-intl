@@ -12,7 +12,7 @@ const addIntlArgs: ArgsEnhancer = (context) => {
   } = context;
 
   const injectedKeys = Object.entries(argTypes)
-    .filter(([key, argType]) => argType.intl)
+    .filter(([, argType]) => argType.intl)
     .map(([key, argType]) => [key, argType.intl]);
 
   return injectedKeys.reduce(
@@ -26,7 +26,7 @@ const addIntlArgs: ArgsEnhancer = (context) => {
 
 export const argsEnhancers: ArgsEnhancer[] = [addIntlArgs];
 
-// export const globals = {
-//   locale: null,
-//   direction: null,
-// };
+export const globals = {
+  locale: null,
+  direction: null,
+};
